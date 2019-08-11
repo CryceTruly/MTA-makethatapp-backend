@@ -1,0 +1,19 @@
+dist: xenial   # required for Python >= 3.7
+language: python
+python:
+  - "3.7"
+
+services: 
+    - postgresql
+
+env:
+    - SECRET_KEY='Applicationsecretkey'
+    
+install:
+    - pipenv install
+
+script:
+    - coverage run manage.py test && coverage report
+
+after_success:
+    - coveralls
