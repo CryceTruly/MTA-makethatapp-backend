@@ -1,0 +1,1 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/6bae0bce435404b055b9/maintainability)](https://codeclimate.com/github/CryceTruly/makethatapp/maintainability) [![Coverage Status](https://coveralls.io/repos/github/CryceTruly/makethatapp/badge.svg?branch=development)](https://coveralls.io/github/CryceTruly/makethatapp?branch=development)
