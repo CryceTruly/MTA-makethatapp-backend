@@ -1,3 +1,3 @@
 release: python manage.py migrate
 
-web: gunicorn landville.wsgi
+web: gunicorn makethatapp.wsgi
