@@ -12,6 +12,7 @@ coveralls = "*"
 django-heroku = "*"
 psycopg2 = "==2.7.7"
 gunicorn = "*"
+autopep8 = "*"
 
 [requires]
 python_version = "3.7"
