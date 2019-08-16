@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    'ckeditor_uploader',
     'makethatapp.apps.lessons'
 ]
+
+CKEDITOR_UPLOAD_PATH='uploads/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -119,9 +123,19 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Number of words read per minute
+WORD_PER_MINUTE = 265
+
+# Standard number of characters in a word
+WORD_LENGTH = 5
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL='/media/'
+MEDIA_ROOT='/media/'
 
 django_heroku.settings(locals())

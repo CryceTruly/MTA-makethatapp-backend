@@ -15,6 +15,7 @@ django-heroku = "*"
 psycopg2 = "==2.7.7"
 gunicorn = "*"
 psycopg2-binary = "*"
+django-ckeditor = "*"
 
 [requires]
 python_version = "3.7"
