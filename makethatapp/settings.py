@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'ckeditor_uploader',
+    'rest_framework',
     'makethatapp.apps.lessons'
 ]
 
@@ -135,6 +136,12 @@ WORD_LENGTH = 5
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+
 MEDIA_URL='/media/'
 MEDIA_ROOT='/media/'
 
