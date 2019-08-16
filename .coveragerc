@@ -1,3 +1,6 @@
 [report]
 omit =
     */virtualenvs/*
+    */migrations/*
+    *__init__.py*
+    */tests/*
