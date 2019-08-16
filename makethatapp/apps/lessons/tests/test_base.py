@@ -4,5 +4,5 @@ from makethatapp.apps.lessons.models import Lesson
 
 class LessonsTestBase(TestCase):
     def setUp(self):
-        self.lesson = Lesson.objects.create(title="hello", slug="", body="")
+        self.lesson = Lesson.objects.create(title="hello", slug="", body="",tagsList=[''])
         return super().setUp()
