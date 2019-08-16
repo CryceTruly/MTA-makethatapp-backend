@@ -14,8 +14,10 @@ class LessonAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         last_lesson = Lesson.objects.latest('id')
-        if "add" in request.path:
-            obj.slug = slugify(obj.title+" "+str(last_lesson.id+1))
+        #todo
+        if last_lesson:
+            if "add" in request.path:
+                obj.slug = slugify(obj.title+" "+str(last_lesson.id+1))
         return super().save_model(request, obj, form, change)
 
 
