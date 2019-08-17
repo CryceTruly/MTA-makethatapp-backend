@@ -5,14 +5,16 @@
 
 
 {% block branding  %}
-<h1 id="head">
-    <img src="{%static 'img/logo.png'%}" alt='logo' height="35" width="50" />
-    MAKETHATAPP
-
-</h1>
+<h1 id="head">Makethatapp Backend</h1>
 
 
 {%endblock%}
+
+
+{% block title %}
+Make that app
+
+{% endblock %}
 {% block extrastyle %}
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
 {% endblock %}

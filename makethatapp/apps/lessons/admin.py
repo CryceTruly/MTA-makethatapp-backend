@@ -1,6 +1,10 @@
 from django.contrib import admin
 from makethatapp.apps.lessons.models import Lesson
 from django.utils.text import slugify
+from django.contrib.auth.models import User
+from django.contrib.auth.models import Group
+from django.utils.translation import ugettext_lazy
+from django.contrib.admin import AdminSite
 
 
 class LessonAdmin(admin.ModelAdmin):
@@ -14,11 +18,15 @@ class LessonAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         last_lesson = Lesson.objects.latest('id')
-        #todo
+
         if last_lesson:
             if "add" in request.path:
                 obj.slug = slugify(obj.title+" "+str(last_lesson.id+1))
         return super().save_model(request, obj, form, change)
 
 
+AdminSite.index_title = ugettext_lazy('BACKEND ADMINSTRATION')
+
+admin.site.unregister(User)
+admin.site.unregister(Group)
 admin.site.register(Lesson, LessonAdmin)
