@@ -1,0 +1,58 @@
+#header {
+  height: 60px;
+  background: #191919;
+  color: white;
+      z-index: 5;
+box-sizing: border-box;
+}
+
+#branding h1 {
+  color: white;
+}
+
+a:link,
+a:visited {
+  color: #10284e;
+}
+
+div.breadcrumbs {
+  background: #05c371;
+}
+
+div.breadcrumbs a {
+  color: #333333;
+}
+.module h2,
+.module caption,
+.inline-group h2 {
+  background:#fa8142;
+}
+
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input,
+a.button {
+  background: #10284e;
+}
+
+.selector-chosen > h2{
+
+    background: #05c371 !important;
+    color: white !important;
+}
+input[type="submit"] {
+  background: #05c371 !important;
+  color: white !important;
+}
+
+
+
+.colMS > h2{
+  content: 'hello';
+}
+
+
+div .colMS{
+  width: 60% !important;
+}
