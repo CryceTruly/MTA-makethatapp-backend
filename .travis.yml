@@ -13,7 +13,8 @@ install:
     - pipenv install
 
 script:
-    - coverage run manage.py test && coverage report
+    - coverage run --source='makethatapp/apps' manage.py test && coverage report && coverage html
+
 
 after_success:
     - coveralls
