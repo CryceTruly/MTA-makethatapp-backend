@@ -17,7 +17,6 @@ gunicorn = "*"
 psycopg2-binary = "*"
 django-ckeditor = "*"
 djangorestframework = "*"
-install = "*"
 django-cors-headers = "*"
 
 [requires]
