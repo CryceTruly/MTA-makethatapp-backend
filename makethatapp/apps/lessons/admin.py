@@ -17,16 +17,14 @@ class LessonAdmin(admin.ModelAdmin):
     view_on_site = False
 
     def save_model(self, request, obj, form, change):
-        last_lesson = Lesson.objects.latest('id')
+        if "add" in request.path:
 
-        if last_lesson:
-            if "add" in request.path:
+            try:
+                last_lesson = Lesson.objects.latest('id')
+                obj.slug = slugify(obj.title+" "+str(last_lesson.id+1))
+            except Exception as identifier:
+                obj.slug = slugify(obj.title)
 
-                try:
-                    obj.slug = slugify(obj.title+" "+str(last_lesson.id+1))
-                except Exception as identifier:
-                    obj.slug = slugify(obj.title)
-                    
         return super().save_model(request, obj, form, change)
 
 
