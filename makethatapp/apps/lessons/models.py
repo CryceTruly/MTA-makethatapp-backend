@@ -14,7 +14,6 @@ class Lesson(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     slug = models.SlugField(blank=True, null=True)
     thumbnail=models.URLField(blank=True,null=True)
-    
 
     def __str__(self):
         return self.title

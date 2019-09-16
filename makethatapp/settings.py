@@ -40,12 +40,15 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'rest_framework',
-    'makethatapp.apps.lessons'
+    'makethatapp.apps.lessons',
+    'corsheaders'
 ]
 
 CKEDITOR_UPLOAD_PATH='uploads/'
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -142,5 +145,8 @@ STATICFILES_DIRS = [
 
 MEDIA_URL='/media/'
 MEDIA_ROOT='/media/'
+
+
+CORS_ORIGIN_ALLOW_ALL=True
 
 django_heroku.settings(locals())
